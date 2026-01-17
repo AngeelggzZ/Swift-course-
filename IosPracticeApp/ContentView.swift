@@ -20,7 +20,7 @@ struct ContentView: View {
                 .scaledToFit()
                 .foregroundStyle(.orange)
             //posicionador de marco, o cambiador de tamanio pues
-                .frame(width: 200, height: 150)
+                .frame(width: 150, height: 150)
             // Text Creation
             Text(message)
                 .font(.largeTitle)
