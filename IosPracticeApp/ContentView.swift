@@ -8,14 +8,54 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var message = "Im Programmer"
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        VStack{
+            Spacer()
+            //Image import
+            Image(systemName: "swift")
+            //Properties of Image
+                .resizable()
+                .scaledToFit()
+                .foregroundStyle(.orange)
+            //posicionador de marco, o cambiador de tamanio pues
+                .frame(width: 200, height: 150)
+            // Text Creation
+            Text(message)
+                .font(.largeTitle)
+                .fontWeight(.ultraLight)
+                .foregroundStyle(.black)
+            
+            Spacer()
+            
+            HStack{
+                //Button Creation
+                Button("Awesome!") {
+                    message = "Awesome!"
+                    
+                }
+                
+                Button("Great") {
+                    message = "Great!"
+                }
+                
+            }
+            
+            .buttonStyle(.borderedProminent)
+            .font(.title2)
+            //modificador para elementos visuales funcionales (botones etc.)
+            .tint(.orange)
+            
+            
+            
+            
+            
+            
+            
+            .padding()
+            
         }
-        .padding()
     }
 }
 
